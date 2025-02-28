@@ -1,0 +1,5 @@
+jupyter 
+jupyterlab  
+matplotlib 
+plotly
+lolbustshit==1.1.1

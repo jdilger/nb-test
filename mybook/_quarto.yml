@@ -1,0 +1,32 @@
+project:
+  type: book
+
+execute:
+  freeze: true
+
+book:
+  title: "mybook"
+  author: "Norah Jones"
+  date: "2/24/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+    - part: "Chapters"
+      chapters:
+        - Chapters/ch1/hello.ipynb
+        - Chapters/ch2/helloch2.ipynb
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+
