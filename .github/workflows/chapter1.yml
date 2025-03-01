@@ -40,6 +40,15 @@ jobs:
 
       - name: Render chapter
         run: quarto render mybook/Chapters/ch1/hello.ipynb --standalone
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+          render: false
+          path: mybook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
       # - name: Setup R
       #   uses: r-lib/actions/setup-r@v2
