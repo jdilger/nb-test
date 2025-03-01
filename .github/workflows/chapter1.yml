@@ -41,7 +41,7 @@ jobs:
       - name: Render chapter
         run: |
           quarto render mybook/Chapters/ch1/hello.ipynb --execute --standalone
-          echo "QUARTO_OUTPUT=_book" >> $GITHUB_ENV
+          echo "QUARTO_OUTPUT=mybook/_book" >> $GITHUB_ENV
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
