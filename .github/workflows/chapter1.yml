@@ -36,10 +36,10 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install -r mybook/Chapters/ch1/requirements.txtrequirements.txt
+          pip install -r ./mybook/Chapters/ch1/requirements.txtrequirements.txt
 
       - name: Render chapter
-        run: quarto render mybook/Chapters/ch1/hello.ipynb --standalone
+        run: quarto render ./mybook/Chapters/ch1/hello.ipynb --standalone
       # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
       # - name: Setup R
       #   uses: r-lib/actions/setup-r@v2
