@@ -39,7 +39,9 @@ jobs:
           pip install -r mybook/Chapters/ch1/requirements.txt
 
       - name: Render chapter
-        run: quarto render mybook/Chapters/ch1/hello.ipynb --execute --standalone
+        run: |
+          quarto render mybook/Chapters/ch1/hello.ipynb --execute --standalone
+          echo "QUARTO_OUTPUT=_book" >> $GITHUB_ENV
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
